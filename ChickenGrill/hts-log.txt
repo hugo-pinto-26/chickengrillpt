@@ -1,0 +1,34 @@
+HTTrack3.49-2+htsswf+htsjava launched on Mon, 09 Sep 2024 21:08:16 at https://templates.hibootstrap.com/fafo/default/index.html +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qiC2%Pns2u1%s%uN1%I0p7DaK0c1R2H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://templates.hibootstrap.com/fafo/default/index.html -O1 "C:\My Web Sites\Restaurant 2" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+21:11:44	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/pro (from https://templates.hibootstrap.com/fafo/default/menu.html)
+21:11:44	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/privacy-policy (from https://templates.hibootstrap.com/fafo/default/contact-us.html)
+21:16:29	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/css/bootstrap-reboot.min.css (from https://templates.hibootstrap.com/fafo/default/index.html)
+22:18:48	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/service-1.jpg (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:19:58	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/service-2.jpg (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:19:58	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/service-3.jpg (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:19:58	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/pizza-receipe-1.png (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:19:58	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/pizza-receipe-2.png (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:19:59	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/pizza-receipe-4.png (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:21:07	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/pizza-receipe-5.png (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:21:08	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/pizza-receipe-6.png (from https://templates.hibootstrap.com/fafo/default/index-2.html)
+22:42:04	Error: 	"Cancelled by User" (-1) at link https://templates.hibootstrap.com/fafo/default/assets/images/reservation-food-shape.png (from https://templates.hibootstrap.com/fafo/default/reservation.html)
+22:46:50	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/css/owl.video.play.png (from https://templates.hibootstrap.com/fafo/default/assets/css/owl.carousel.min.css)
+22:50:32	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/fonts/revicons/revicons.eot?5510888 (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:51:25	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/fonts/revicons/revicons.woff?5510888 (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:51:26	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/fonts/revicons/revicons.ttf?5510888 (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:51:30	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/fonts/revicons/revicons.svg?5510888 (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:51:37	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/css/openhand.cur (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:51:41	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/css/closedhand.cur (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:52:42	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/assets/gridtile.png (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:52:43	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/assets/gridtile_white.png (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:52:46	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/assets/gridtile_3x3.png (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+22:52:53	Error: 	"Not Found" (404) at link https://templates.hibootstrap.com/fafo/default/assets/assets/gridtile_3x3_white.png (from https://templates.hibootstrap.com/fafo/default/assets/css/settings.css)
+
+HTTrack Website Copier/3.49-2 mirror complete in 1 hours 49 minutes 23 seconds : 363 links scanned, 340 files written (14773126 bytes overall), 1 files updated [240117 bytes received at 36 bytes/sec], 3943 bytes transferred using HTTP compression in 16 files, ratio 65%, 1.2 requests per connection
+(23 errors, 0 warnings, 0 messages)
