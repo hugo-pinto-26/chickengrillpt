@@ -28,13 +28,13 @@
       <link rel="stylesheet" href="images/navigation.css" type="text/css" media="all" />
       <link rel="stylesheet" href="images/style.css" type="text/css" media="all" />
       <link rel="stylesheet" href="images/responsive.css" type="text/css" media="all" />
-      <link rel="stylesheet" href="images/theme-dark.css" type="text/css" media="all" />
+      <!-- <link rel="stylesheet" href="images/theme-dark.css" type="text/css" media="all" /> -->
       <!-- [if IE]>
          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
          <![endif] -->
    </head>
    <body>
-      <div class="preloader bg-main">
+      <!-- <div class="preloader bg-main">
          <div class="preloader-wrapper">
             <div class="preloader-grid">
                <div class="preloader-grid-item preloader-grid-item-1"></div>
@@ -48,7 +48,7 @@
                <div class="preloader-grid-item preloader-grid-item-9"></div>
             </div>
          </div>
-      </div>
+      </div> -->
       <div class="topbar bg-main">
          <div class="container">
             <div class="topbar-inner">
@@ -65,7 +65,7 @@
                   <div class="topbar-right d-flex flex-wrap topbar-right justify-content-center justify-content-md-start full-height">
                      <div class="topbar-right-item topbar-padding color-white">
                         <i class="flaticon-clock"></i>
-                        Friday Closed
+                        Closed from Monday to Thursday
                      </div>
                      <div class="topbar-right-item topbar-padding color-white">
                         <i class="flaticon-placeholder-1"></i>
@@ -243,13 +243,13 @@
                                     <li class="nav-item">
                                        <a href="faqs.html" class="nav-link">FAQ's</a>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                        <a href="our-history.html" class="nav-link">Our History</a>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> -->
+                                    <!-- <li class="nav-item">
                                        <a href="services.html" class="nav-link">Services</a>
-                                    </li>
-                                    <li class="nav-item">
+                                    </li> -->
+                                    <!-- <li class="nav-item">
                                        <a href="#" class="nav-link dropdown-toggle">Team</a>
                                        <ul class="dropdown-menu">
                                           <li class="nav-item">
@@ -259,7 +259,7 @@
                                              <a href="team-details.html" class="nav-link">Team Details</a>
                                           </li>
                                        </ul>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
                                        <a href="#" class="nav-link dropdown-toggle">Restaurant</a>
                                        <!-- <ul class="dropdown-menu">
@@ -288,17 +288,17 @@
                                           <li class="nav-item">
                                              <a href="checkout.html" class="nav-link">Checkout</a>
                                           </li>
-                                          <li class="nav-item">
+                                          <!-- <li class="nav-item">
                                              <a href="tracking-order.html" class="nav-link">Tracking Order</a>
-                                          </li>
+                                          </li> -->
                                           <!-- <li class="nav-item">
                                              <a href="my-account.html" class="nav-link">My Account</a>
                                           </li> -->
                                        </ul>
                                     </li>
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                        <a href="testimonial.html" class="nav-link">Testimonial</a>
-                                    </li>
+                                    </li> -->
                                     <li class="nav-item">
                                        <a href="#" class="nav-link dropdown-toggle">Others</a>
                                        <ul class="dropdown-menu">
@@ -1529,10 +1529,12 @@
                            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
                         </div>
                         <ul class="footer-details footer-address">
-                           <li>12 Poor Street, New York, USA</li>
-                           <li><span>Hotline:</span><a href="tel:001-964-565-87652">+1 964 565 87652</a></li>
-                           <li><span>Email:</span><a href="https://templates.hibootstrap.com/cdn-cgi/l/email-protection#cea6aba2a2a18ea8afa8a1e0ada1a3"><span class="__cf_email__" data-cfemail="c5ada0a9a9aa85a3a4a3aaeba6aaa8">[email&#160;protected]</span></a></li>
-                        </ul>
+                           <li>Leuken 95, 3920 Lommel</li>
+                           <li><span>Hotline:</span><a href="tel:+32487075210">+32 487 07 52 10</a></li>
+                           <li>
+                              <span>Email:</span>
+                              <a href="#" id="protectedEmail"><span class="__cf_email__">[email&#160;protected]</span></a>
+                          </li>                        </ul>
                         <div class="footer-follow">
                            <p>Follow Us:</p>
                            <ul class="social-list social-list-white">
@@ -1551,12 +1553,13 @@
                            <h3>Open Hours</h3>
                         </div>
                         <ul class="footer-details footer-time">
-                           <li>Saturday: <span>08:00 - 23.00</span></li>
-                           <li>Sunday: <span>08:00 - 23.00</span></li>
-                           <li>Monday: <span>08:00 - 21.00</span></li>
+                           <li>Friday: <span>16:00 - 22.00</span></li>
+                           <li>Saturday: <span>14:00 - 23.00</span></li>
+                           <li>Sunday: <span>14:00 - 23.00</span></li>
+                           <!--<li>Monday: <span>08:00 - 21.00</span></li>
                            <li>Tuesday: <span>09:00 - 23.00</span></li>
                            <li>Wednesday: <span>08:00 - 23.00</span></li>
-                           <li>Thursday: <span>08:00 - 23.00</span></li>
+                           <li>Thursday: <span>08:00 - 23.00</span></li> -->
                         </ul>
                      </div>
                   </div>
@@ -1758,7 +1761,24 @@
             // addItemToCart({ id: 1, name: "Burger", quantity: 1 });
         });
       </script>
-      <!-- //Cart Update -->
+      <!-- !Cart Update -->
+      <!-- Email -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+             // Your new email address
+             const newEmail = 'chickengrillpt@gmail.com';
+             
+             // Split the email into encoded format
+             const encodedEmail = newEmail.split('').map(char => char.charCodeAt(0).toString(16)).join('');
+     
+             // Set the href attribute and the visible text
+             const emailLink = document.getElementById('protectedEmail');
+             emailLink.href = `mailto:${newEmail}`;
+             emailLink.querySelector('span').textContent = newEmail;
+             emailLink.querySelector('span').setAttribute('data-cfemail', encodedEmail);
+         });
+      </script>
+      <!-- Email -->
       <script data-cfasync="false" src="images/email-decode.min.js"></script>
       <script src="images/jquery.min.js"></script>
       <script src="images/bootstrap.bundle.min.js"></script>
