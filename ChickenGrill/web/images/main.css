@@ -1,0 +1,9 @@
+.cart-modal-wrapper {
+    display: none;
+    /* other styles */
+}
+
+.cart-modal-wrapper.show-cart {
+    display: block;
+    /* other styles when visible */
+}

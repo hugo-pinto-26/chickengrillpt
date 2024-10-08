@@ -9,6 +9,7 @@
       <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
       <title>KipGrill - Smaak van Portugal</title>
       <link rel="icon" href="images/tab.png" type="image/png" sizes="16x16">
+      <link rel="stylesheet" href="images/main.css" type="css" media="all" />
       <link rel="stylesheet" href="images/bootstrap.min.css" type="text/css" media="all" />
       <link rel="stylesheet" href="bootstrap-reboot.min.html" type="text/css" media="all" />
       <link rel="stylesheet" href="images/animate.min.css" type="text/css" media="all" />
@@ -110,7 +111,7 @@
                         <div class="dropdown-menu" aria-labelledby="mobileOptionDropdown">
                            <div class="navbar-option-item navbar-option-cart">
                               <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-                              <span class="option-badge">2</span>
+                              <span class="option-badge" id="cartItemCount">2</span>
                            </div>
                            <div class="navbar-option-item navbar-option-order">
                               <a href="shops-grid.html" class="btn">
@@ -119,7 +120,7 @@
                            </div>
                         </div>
                      </div>
-                      <div class="navbar-option-item ">
+                        <div class="navbar-option-item ">
                         <!-- <button class="navbar-authentication-button" type="button" id="auth2" data-bs-toggle="dropdown" aria-haspopup="true"><i class="flaticon-add-user"></i></button> 
                         <div class="authentication-box dropdown-menu" aria-labelledby="auth2">
                            <div class="authentication-close"><i class="flaticon-cancel"></i></div>
@@ -207,9 +208,12 @@
                         </div>
                      </div>
                      <div class="navbar-option-item navbar-option-cart mobile-block">
-                        <a href="#" class="productCart"><i class="flaticon-supermarket-basket"></i></a>
-                        <span class="option-badge">2</span>
-                     </div>
+                        <a href="#" class="productCart" id="cartIcon">
+                            <i class="flaticon-supermarket-basket"></i>
+                        </a>
+                        <span class="option-badge" id="cartItemCount">2</span>
+                    </div>
+                    
                      <div class="navbar-option-item navbar-option-order mobile-block">
                         <a href="shops-grid.html" class="btn">
                         <i class="flaticon-shopping-cart-black-shape"></i>
@@ -258,14 +262,14 @@
                                     </li>
                                     <li class="nav-item">
                                        <a href="#" class="nav-link dropdown-toggle">Restaurant</a>
-                                       <ul class="dropdown-menu">
+                                       <!-- <ul class="dropdown-menu">
                                           <li class="nav-item">
                                              <a href="deals.html" class="nav-link">Deals</a>
                                           </li>
                                           <li class="nav-item">
                                              <a href="reservation.html" class="nav-link">Reservation</a>
                                           </li>
-                                       </ul>
+                                       </ul> -->
                                     <li class="nav-item">
                                        <a href="#" class="nav-link dropdown-toggle">Shop</a>
                                        <ul class="dropdown-menu">
@@ -278,9 +282,9 @@
                                           <li class="nav-item">
                                              <a href="cart.html" class="nav-link">Cart</a>
                                           </li>
-                                          <li class="nav-item">
+                                          <!-- <li class="nav-item">
                                              <a href="wishlist.html" class="nav-link">Wishlist</a>
-                                          </li>
+                                          </li> -->
                                           <li class="nav-item">
                                              <a href="checkout.html" class="nav-link">Checkout</a>
                                           </li>
@@ -1565,7 +1569,6 @@
                   <div class="footer-lower-item">
                      <div class="footer-copyright-text footer-copyright-text-red">
                         <p>© KipGrill
-                              
                         </p>
                      </div>
                   </div>
@@ -1648,16 +1651,18 @@
             <span><i class="flaticon-up-arrow"></i></span>
          </div>
       </div>
-      <script>document.addEventListener("DOMContentLoaded", () => {
-         // Close cart modal
+      <script>
+         document.addEventListener("DOMContentLoaded", () => {
          const cartModalWrapper = document.getElementById("cartModalWrapper");
          const cartModalClose = document.getElementById("cartModalClose");
+         const cartItemCount = document.getElementById("cartItemCount");
+         
+         let itemCount = parseInt(cartItemCount.textContent, 10); // Initialize itemCount based on current badge value
      
          cartModalClose.addEventListener("click", () => {
              cartModalWrapper.style.display = "none";
          });
      
-         // Delete item from cart
          const deleteButtons = document.querySelectorAll(".delete-item");
      
          deleteButtons.forEach((button) => {
@@ -1666,10 +1671,10 @@
                  const product = button.closest(".cart-modal-product");
                  product.remove();
                  updateCartTotal();
+                 updateCartItemCount(-1); // Decrement item count
              });
          });
      
-         // Update total price when items are removed
          function updateCartTotal() {
              const products = document.querySelectorAll(".cart-modal-product");
              let total = 0;
@@ -1683,11 +1688,79 @@
              cartTotalElement.textContent = `€${total.toFixed(2)}`;
          }
      
+         function updateCartItemCount(change) {
+             itemCount += change; // Update itemCount based on the change
+             cartItemCount.textContent = itemCount > 0 ? itemCount : 0; // Ensure count does not go below 0
+         }
+     
          // Initialize cart total on page load
          updateCartTotal();
      });
      </script>
-      <script data-cfasync="false" src="images/email-decode.min.js"></script><script src="images/jquery.min.js"></script>
+     <script>
+         document.addEventListener("DOMContentLoaded", () => {
+            const cartIcon = document.getElementById("cartIcon");
+            const cartModalWrapper = document.querySelector(".cart-modal-wrapper");
+            const closeModal = document.querySelector(".cart-modal-close");
+         
+            // Toggle cart modal visibility when the cart icon is clicked
+            cartIcon.addEventListener("click", (event) => {
+               event.preventDefault();
+               cartModalWrapper.classList.toggle("show-cart");
+            });
+         
+            // Close cart modal when the close button is clicked
+            closeModal.addEventListener("click", () => {
+               cartModalWrapper.classList.remove("show-cart");
+            });
+         
+            // Close cart modal when clicking outside of it
+            document.addEventListener("click", (event) => {
+               if (!cartModalWrapper.contains(event.target) && !cartIcon.contains(event.target)) {
+                  cartModalWrapper.classList.remove("show-cart");
+               }
+            });
+         });
+      </script>
+      <!-- Cart Update -->
+      <script>
+         document.addEventListener('DOMContentLoaded', function() {
+            // Function to update the cart item count
+            function updateCartCount() {
+                const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                const itemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+                const cartItemCountElement = document.getElementById('cartItemCount');
+                
+                if (cartItemCountElement) {
+                    cartItemCountElement.textContent = itemCount;
+                }
+            }
+        
+            // Example of how to add items to the cart and save in localStorage
+            function addItemToCart(item) {
+                let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                const existingItem = cartItems.find(cartItem => cartItem.id === item.id);
+                
+                if (existingItem) {
+                    existingItem.quantity += item.quantity;
+                } else {
+                    cartItems.push(item);
+                }
+                
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                updateCartCount();
+            }
+        
+            // Call the update function when the page loads
+            updateCartCount();
+        
+            // Example usage: Adding an item with ID 1 and quantity 1
+            // addItemToCart({ id: 1, name: "Burger", quantity: 1 });
+        });
+      </script>
+      <!-- //Cart Update -->
+      <script data-cfasync="false" src="images/email-decode.min.js"></script>
+      <script src="images/jquery.min.js"></script>
       <script src="images/bootstrap.bundle.min.js"></script>
       <script src="images/jquery-ui.js"></script>
       <script src="images/jquery.timepicker.min.js"></script>
