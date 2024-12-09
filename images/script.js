@@ -330,7 +330,7 @@ jQuery(function($) {
         image: {
             tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
             titleSrc: function(item) {
-                return item.el.attr('title') + '<small>by Fafo</small>';
+                return item.el.attr('title') + '<small>by Kipgrill</small>';
             }
         }
     });
@@ -518,25 +518,3 @@ jQuery(function($) {
     });
     $('body').append("<div class='switch-box'><label id='switch' class='switch'><input type='checkbox' onchange='toggleTheme()' id='slider'><span class='slider round'></span></label></div>");
 }($));
-
-function setTheme(themeName) {
-    localStorage.setItem('fafo_theme', themeName);
-    document.documentElement.className = themeName;
-}
-
-// function toggleTheme() {
-//     if (localStorage.getItem('fafo_theme') === 'theme-dark') {
-//         setTheme('theme-light');
-//     } else {
-//         setTheme('theme-dark');
-//     }
-// }
-(function() {
-    if (localStorage.getItem('fafo_theme') === 'theme-dark') {
-        setTheme('theme-dark');
-        document.getElementById('slider').checked = false;
-    } else {
-        setTheme('theme-light');
-        document.getElementById('slider').checked = true;
-    }
-})();
