@@ -514,6 +514,15 @@
 			   <span><i class="flaticon-up-arrow"></i></span>
 			</div>
 		 </div>
+		 <script>
+			document.addEventListener('DOMContentLoaded', () => {
+				document.querySelectorAll('.zoomable').forEach((img) => {
+					img.addEventListener('click', () => {
+						img.classList.toggle('clicked');
+					});
+				});
+			});
+		</script>
 		 <script data-cfasync="false" src="images/email-decode.min.js"></script><script src="images/jquery.min.js"></script>
 		 <script src="images/bootstrap.bundle.min.js"></script>
 		 <script src="images/jquery-ui.js"></script>
