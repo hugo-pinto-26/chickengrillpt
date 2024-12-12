@@ -32,6 +32,16 @@ html, body {
   background: #555; 
 }
 
+img.zoomable {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+img.zoomable.clicked {
+    transform: scale(1.5); /* Increase the size of the image */
+}
+
+
 body {
 	margin: 0;
 	padding: 0;
